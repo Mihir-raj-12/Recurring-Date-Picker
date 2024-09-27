@@ -30,7 +30,7 @@ const DatePickerComponent = ({
         minDate={startDate}
         placeholderText="Click to select an end date"
         dateFormat="dd/MM/yyyy"
-        isClearable // Optional: Adds a clear button to reset the end date
+        isClearable 
       />
     </div>
   );

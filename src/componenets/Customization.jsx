@@ -12,7 +12,7 @@ const Customization = ({ recurrence, customization, onCustomize }) => {
   ];
 
   const handleIntervalChange = (e) => {
-    const newInterval = parseInt(e.target.value, 10) || 1; // Ensure the value is a number
+    const newInterval = parseInt(e.target.value, 10) || 1; 
     onCustomize({ ...customization, interval: newInterval });
   };
 

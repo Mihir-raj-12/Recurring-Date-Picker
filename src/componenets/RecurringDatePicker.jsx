@@ -50,7 +50,6 @@ const generateRecurringDates = (
         break;
     }
 
-    // Stop the loop if no end date and max reasonable limit reached
     if (!endDate && dates.length > 365) break;
   }
 
@@ -64,7 +63,6 @@ const RecurringDatePicker = () => {
   const [customization, setCustomization] = useState({ interval: 1, days: [] });
   const [selectedDates, setSelectedDates] = useState([]);
 
-  // Logic to recalculate dates when needed
   useEffect(() => {
     if (startDate && recurrence !== "None") {
       const dates = generateRecurringDates(
@@ -89,7 +87,6 @@ const RecurringDatePicker = () => {
       <RecurrenceOptions
         recurrence={recurrence}
         onRecurrenceChange={(recurrenceType) => {
-          // Reset customization on recurrence type change
           setCustomization({ interval: 1, days: [] });
           setRecurrence(recurrenceType);
         }}
